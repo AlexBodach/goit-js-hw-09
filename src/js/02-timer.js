@@ -17,6 +17,7 @@ let timer;
 
 refs.button.setAttribute('disabled', false)
 
+
 flatpickr(refs.input, {
   enableTime: true,
   time_24hr: true,
@@ -28,8 +29,7 @@ flatpickr(refs.input, {
       if (currentData > selectedDataCalendar) {
       Notify.failure('Please choose a date in the future');
       return;
-    }
- 
+    } 
     refs.button.removeAttribute('disabled');
   },
   })
@@ -39,6 +39,7 @@ refs.button.addEventListener('click', onButtonStartClick)
 
 function onButtonStartClick () {  
   refs.button.setAttribute('disabled', false);
+  refs.input.setAttribute('disabled', false)
   const timerId = setInterval(function() {
     currentData = new Date().getTime()
     const timeForTimer = selectedDataCalendar - currentData;
