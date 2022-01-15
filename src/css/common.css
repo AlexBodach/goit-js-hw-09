@@ -25,7 +25,6 @@ img {
 }
 
 .button {
-
   height: 50px;
   width: 100px;
 
@@ -38,3 +37,11 @@ img {
 .buttonStart {
   margin-right: 20px;
 }
+
+/* .timer {
+  display: flex;
+} */
+
+/* .field {
+  display:table-row;
+} */
