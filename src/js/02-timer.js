@@ -43,11 +43,14 @@ function onButtonStartClick () {
   const timerId = setInterval(function() {
     currentData = new Date().getTime()
     const timeForTimer = selectedDataCalendar - currentData;
-  
-    convertMs(timeForTimer); 
-    updateTimerOnPage ();
    
-  }, 1000);
+     if (timeForTimer < 0) {
+      clearInterval(timerId)
+      return    
+  } 
+    convertMs(timeForTimer); 
+    updateTimerOnPage (); 
+  }, 1000);  
 }
 
 function convertMs(ms) {
