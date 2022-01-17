@@ -42,8 +42,7 @@ function onButtonStartClick () {
   refs.input.setAttribute('disabled', false)
   const timerId = setInterval(function() {
     currentData = new Date().getTime()
-    const timeForTimer = selectedDataCalendar - currentData;
-   
+    const timeForTimer = selectedDataCalendar - currentData;   
      if (timeForTimer < 0) {
       clearInterval(timerId)
       return    
